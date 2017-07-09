@@ -52,7 +52,8 @@ if (strlen($www_top) == 1) {
 	$www_top = "";
 }
 
-// Used everywhere an href is output.
-define('WWW_TOP', $www_top);
+if (!defined('WWW_TOP')) {
+  define('WWW_TOP', $www_top);
+}
 
 ?>
